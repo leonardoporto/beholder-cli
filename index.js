@@ -56,8 +56,8 @@ program
       .then(show)
       .catch(error => {
         options.debug && console.log({
-          status: error?.response?.status,
-          url: error?.response?.url,
+          status: error && error.response && error.response.status,
+          url: error && error.response && error.response.url,
         })
         console.log('Check your ~/.beholder file with github credentials.')
       })
