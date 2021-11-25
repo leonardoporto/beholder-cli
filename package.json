@@ -1,7 +1,20 @@
 {
-  "name": "beholderpr",
-  "description": "list all ",
-  "version": "1.0.0",
+  "name": "beholder-cli",
+  "description": "Ferramenta para listar os pull requests abertos.",
+  "keywords": [
+    "github",
+    "pull request",
+    "pr",
+    "code review"
+  ],
+  "homepage": "https://github.com/leonardoporto/beholder-cli",
+  "bugs": {
+    "url": "https://github.com/leonardoporto/beholder-cli/issues",
+    "email": "leonardo.porto.souza@gmail.com"
+  },
+  "author": "Leonardo Porto <leonardo.porto.souza@gmail.com>",
+  "private": false,
+  "version": "1.0.2",
   "main": "index.js",
   "license": "MIT",
   "bin": {
