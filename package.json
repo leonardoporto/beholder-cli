@@ -14,7 +14,7 @@
   },
   "author": "Leonardo Porto <leonardo.porto.souza@gmail.com>",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "license": "MIT",
   "bin": {

@@ -27,6 +27,7 @@ GITHUB_ORGANIZATION=
 | ------------------- | ------------------------------------------------------------------------------------------------------------- |
 | GITHUB_TOKEN        | deverá ser gerado em [Personal access token](https://github.com/settings/tokens) somente com permissão _repo_ |
 | GITHUB_ORGANIZATION | indicará qual organização, que você tem acesso, você quer monitorar.                                          |
+| GITHUB_REPOSITORY_GROUP | filtrará pelo grupo de repositorios indicados.                                                            |
 
 ## Como utilizar
 
@@ -48,5 +49,6 @@ Options:
   -b, --bot        list pr by bot (default: false)
   -w, --wip        list pr with status work in progress (default: false)
   -d, --debug      enable debug (default: false)
+  -r, --repos      filter by repos - separate by "," (default: "<GITHUB_REPOSITORY_GROUP>")
   -h, --help       display help for command
 ```

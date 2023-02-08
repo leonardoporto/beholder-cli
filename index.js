@@ -24,6 +24,11 @@ const filterByOptions = (pullRequests, options) => {
   if (!options.wip) {
     data = data.filter(pullRequest => !pullRequest.title.toUpperCase().includes('WIP'))
   }
+  if (options.repos || process.env.GITHUB_REPOSITORY_GROUP) {
+    const groups = options.repos || process.env.GITHUB_REPOSITORY_GROUP
+    const repositories = groups.split(',')
+    data = data.filter(pullRequest => repositories.includes(pullRequest.repository))
+  }
   return data
 }
 
@@ -43,6 +48,7 @@ program
   .option('-b, --bot', 'list pr by bot', false)
   .option('-w, --wip', 'list pr with status work in progress', false)
   .option('-d, --debug', 'enable debug', false)
+  .option('-r, --repos <repos>', 'filter by repos - separate by ","', process.env.GITHUB_REPOSITORY_GROUP)
   .action((options) => {
     options.debug && console.log(options)
 
